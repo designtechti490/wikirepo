@@ -12,24 +12,42 @@ function App() {
   const [repos, setRepos] = useState([]);
 
   const handleSearchRepo = async () => {
-    const { data } = await api.get(`repos/${currentRepo}`);
+    const repo = currentRepo.trim();
 
-    if (data.id) {
-      const isExist = repos.find((repo) => repo.id === data.id);
-
-      if (!isExist) {
-        setRepos((prev) => [...prev, data]);
-        setCurrentRepo("");
-        return;
-      }
+    if (!repo) {
+      alert("Informe o repositório no formato usuário/repositório.");
+      return;
     }
-    alert("Repositório não encontrado");
+
+    if (!repo.includes("/")) {
+      alert("Use o formato usuário/repositório (ex: facebook/react).");
+      return;
+    }
+
+    try {
+      const { data } = await api.get(`repos/${repo}`);
+
+      if (data.id) {
+        const isExist = repos.find((repo) => repo.id === data.id);
+
+        if (!isExist) {
+          setRepos((prev) => [...prev, data]);
+          setCurrentRepo("");
+          return;
+        }
+      }
+      alert("Repositório já adicionado ou não encontrado.");
+    } catch (error) {
+      alert(
+        "Repositório não encontrado. Por favor, verifique o nome do repositório (usuário/repositório).",
+      );
+      console.error("Error searching repo:", error);
+    }
   };
 
   const handleRemoveRepo = (id) => {
-    console.log("Removendo registro", id);
-
-    // TODO: utilizar filter.
+    const updatedRepos = repos.filter((repo) => repo.id !== id);
+    setRepos(updatedRepos);
   };
 
   return (
@@ -41,7 +59,11 @@ function App() {
       />
       <Button onClick={handleSearchRepo} />
       {repos.map((repo) => (
-        <ItemRepo handleRemoveRepo={handleRemoveRepo} repo={repo} />
+        <ItemRepo
+          key={repo.id}
+          handleRemoveRepo={handleRemoveRepo}
+          repo={repo}
+        />
       ))}
     </Container>
   );

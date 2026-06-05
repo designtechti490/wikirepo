@@ -13,9 +13,9 @@ const ItemRepo = ({ repo, handleRemoveRepo }) => {
         Ver repositório
       </a>
       <br />
-      <a href="#" rel="noreferrer" className="remover">
+      <button className="remover" onClick={handleRemove}>
         Remover
-      </a>
+      </button>
       <hr />
     </ItemContainer>
   );
