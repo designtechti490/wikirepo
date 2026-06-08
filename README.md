@@ -1,5 +1,7 @@
 # 🗂️ WikiRepo
 
+![Preview](github/preview.gif)
+
 WikiRepo is a React application that allows you to search for public repositories on GitHub, save the results to a local list, and remove added items. Ideal for exploring favorite projects and keeping a quick history of accessed repositories.
 
 ## 🛠️ Features
