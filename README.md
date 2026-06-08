@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# 🗂️ WikiRepo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+WikiRepo is a React application that allows you to search for public repositories on GitHub, save the results to a local list, and remove added items. Ideal for exploring favorite projects and keeping a quick history of accessed repositories.
 
-## Available Scripts
+## 🛠️ Features
 
-In the project directory, you can run:
+- Search for GitHub repositories via public API (`username/repository`)
+- Input format validation
+- Prevents adding duplicate repositories
+- Displays a list of searched repositories
+- Removes repositories from the list
+- Responsive layout with `styled-components`
 
-### `npm start`
+## 🚀 Technologies used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![ReactJS](https://img.shields.io/badge/-ReactJS-121011?style=for-the-badge&logo=react)&nbsp;
+![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)&nbsp;
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📁 Main structure
 
-### `npm test`
+- `src/pages/App.js` — main application logic and state
+- `src/components/Input` — Input field for repository name
+- `src/components/Button` — search button
+- `src/components/ItemRepo` — display of each added repository
+- `src/services/api.js` — Axios instance for communication with GitHub
+- `public/index.html` — tab title and basic app configuration
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 💻 How to Setup
 
-### `npm run build`
+![Clone Repo](github/cloning-repo.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## ⚙️ How to run in development mode
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Start Project](github/start-project.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🌐 View on hosting link
 
-### `npm run eject`
+Check out the website by clicking here [WikiRepo](https://wikirepo-three.vercel.app/)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 👤 Author
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<table width="100%">
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<tr>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<td align="center">
 
-## Learn More
+<a href="https://github.com/designtechti490">
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<img src="https://github.com/designtechti490.png" width="100px;" alt=""/>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<br />
 
-### Code Splitting
+<sub>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<b>Marcelo Junior</b>
+          <i>Front End Developer</i>
 
-### Analyzing the Bundle Size
+</sub>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+</a>
 
-### Making a Progressive Web App
+</td>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+</tr>
 
-### Advanced Configuration
+</table>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="center"> Developed with 💜 during Rocketseat's React Trail </p>
